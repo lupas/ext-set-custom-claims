@@ -13,15 +13,17 @@ This extension is implemented as an HTTPS Callable Function. To call it from you
 
 ```js
 functions.httpsCallable('${function:setCustomClaims.name}')({
-    // uid: The user uid of the auth user that should be modified.
     uid: 'foo',
-    // customClaims: The custom claims that need to be set.
     customClaims: {
-        // Example: You can set custom claims as you like.
-        admin: true
+        admin: true // Example
     }
 })
 ```
+
+## Payload
+
+- __uid:__ The uid of the user, which should be modified
+- __customClaims:__ An object containing the custom claims to be set.
 
 # Using the extension
 When triggered from your application's SDK, this extension will set custom claims for a user. This can be useful, for example, for setting custom claims for a users roles, like `admin = true`.
