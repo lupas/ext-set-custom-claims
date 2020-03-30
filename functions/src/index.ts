@@ -6,6 +6,7 @@
 
 import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
+import { get } from 'lodash'
 
 export const setCustomClaims = functions.handler.https.onCall(async ({uid, customClaims}, context) => {
 
@@ -13,7 +14,7 @@ export const setCustomClaims = functions.handler.https.onCall(async ({uid, custo
   const SECURITY_CLAIM_PATH = process.env.SECURITY_CLAIM_PATH
 
   // If securityCheck is set, check if it is true, othrwise reeject the call.
-  if (SECURITY_CLAIM_PATH && (!callerAuth || !callerAuth.token[SECURITY_CLAIM_PATH])) {
+  if (SECURITY_CLAIM_PATH && (!callerAuth || !get(callerAuth.token, SECURITY_CLAIM_PATH))) {
     throw new functions.https.HttpsError('unauthenticated', "You are not allowed do call this action.")
   }
 
@@ -21,7 +22,6 @@ export const setCustomClaims = functions.handler.https.onCall(async ({uid, custo
 
   try {
     // Sets certain custom claims to a user
-
     await admin.auth().setCustomUserClaims(uid, customClaims)
   } catch (e) {
     console.error(e)
