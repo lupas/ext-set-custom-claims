@@ -2,9 +2,11 @@ Use this extension to set custom claims to a user.
 
 When triggered from your application's SDK, this extension will set custom claims for a user. This can be useful, for example, for setting custom claims for a users roles, like `admin = true`.
 
-
 # Additional setup
 None
+
+### Security
+The parameter SECURITY_CLAIM_PATH will setup a security check for the caller. If, for example, only admins shall be able to call this function, and your admin custom claim token is simply `admin`, you can set SECURITY_CLAIM_PATH to `admin`, and the function will fail if the callers custom claim token `admin !== true`.
 
 <!-- We recommend keeping the following section to explain how billing for Firebase Extensions works -->
 # Billing

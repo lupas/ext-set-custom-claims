@@ -22,7 +22,7 @@ functions.httpsCallable('${function:setCustomClaims.name}')({
 
 ## Payload
 
-- __uid:__ The uid of the user, which should be modified
+- __uid:__ The uid of the user that should be modified
 - __customClaims:__ An object containing the custom claims to be set.
 
 # Using the extension
