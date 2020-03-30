@@ -1,3 +1,13 @@
+# Important
+Before you can use this extension, follow these steps to make the functions deployed for this extension publicly accessible:
+
+1. Go to the Cloud Functions dashboard for your project in the Google Cloud console.
+2. Click the checkbox next to the function called ext-${param:EXT_INSTANCE_ID}-<function-name>.
+3. If it's not already expanded, click Show Info Panel (in the top-right corner) to show the Permissions tab.
+4. Click Add Member. Then, in the New members field, enter the user allUsers.
+5. Select the role Cloud Functions Invoker from the role dropdown list. You may need to type in this role's name to pull it into the list.
+6. Click Save.
+
 # See it in action
 This extension is implemented as an HTTPS Callable Function. To call it from your client app, follow the instructions at https://firebase.google.com/docs/functions/callable#call_the_function. The name of the function that you want to call is ${function:setCustomClaims.name}, and its region is ${function:setCustomClaims.location}.
 
