@@ -6,7 +6,7 @@ In order to get this Extension to work, you currently need to run the following 
 gcloud alpha functions add-iam-policy-binding ext-set-custom-claims-setCustomClaims --member=allUsers --role=cloudfunctions.invoker
 ```
 
-See: https://github.com/firebase/functions-samples/issues/395#issuecomment-605025572
+See: https://groups.google.com/forum/#!topic/firebase-mods-trusted-testers/XgWsrRpXMmQ
 
 # Problem 2
 
