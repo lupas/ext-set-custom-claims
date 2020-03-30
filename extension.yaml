@@ -19,10 +19,10 @@ billingRequired: false  # Learn more in the docs
 
 sourceUrl: https://github.com/lupas/ext-set-custom-claims
 
-# author:
-#   - authorName: Pascal Luther
-#     email: pascal@luther.ch
-#     url: https://github.com/lupas
+author:
+  authorName: Pascal Luther
+  email: pascal@luther.ch
+  url: https://github.com/lupas
 
 # For your extension to interact with other Google APIs (like Firestore, Cloud Storage, or Cloud Translation),
 # set the `apis` field. In addition, set the `roles` field to grant appropriate IAM access to interact with these products.
