@@ -17,6 +17,8 @@ description: >-
 
 billingRequired: false  # Learn more in the docs
 
+sourceUrl: https://github.com/lupas/ext-set-custom-claims
+
 # author:
 #   - authorName: Pascal Luther
 #     email: pascal@luther.ch
