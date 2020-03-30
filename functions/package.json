@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "tslint --project tsconfig.json",
     "build": "tsc",
-    "deploy": "cd .. && npm run build --prefix=functions && firebase ext:install . --project=animalcrossingitemlist"
+    "deploy": "cd .. && npm run build --prefix=functions && firebase ext:install ."
   },
   "main": "lib/index.js",
   "dependencies": {
